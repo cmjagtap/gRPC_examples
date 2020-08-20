@@ -1,0 +1,23 @@
+
+syntax = "proto3";
+
+package userPackage;
+
+service Greeter
+ {
+  //Unary RPC
+  rpc SayHello (UserName) returns (UserAddress) 
+  {
+
+  }
+}
+
+message UserName 
+{
+	string name = 1;
+}
+
+message UserAddress 
+{
+  string message = 1;
+}

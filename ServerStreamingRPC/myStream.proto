@@ -1,0 +1,25 @@
+
+syntax = "proto3";
+
+package userPackage;
+
+service Greeter
+ {
+//Server streaming RPC
+  rpc getPhoneBook(UserName) returns (stream ContactInfo) 
+  {
+
+  }
+}
+
+message UserName 
+{
+ string name = 1;
+}
+
+message ContactInfo
+{
+ string name = 1;
+ 
+ string contactnumber = 2 ;
+}

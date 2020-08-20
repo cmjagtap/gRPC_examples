@@ -1,0 +1,22 @@
+
+syntax = "proto3";
+
+package userPackage;
+
+service FileUpload
+ {
+   rpc Store(stream FileContent) returns (FileAck) 
+   {
+   
+   }
+}
+
+message FileContent 
+{
+  bytes content = 1;
+}
+
+message FileAck 
+{
+  string message = 1;
+}

@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package userPackage;
+
+service Greeter
+ {
+  // Bidirectional streaming RPC
+  rpc getStudentResults(stream StudentInfo) returns (stream StudentInfo)
+  {
+  
+  }
+
+}
+message StudentInfo
+{
+ string name = 1;
+ string stdclass = 2;
+ string address = 3;
+}
+
+message StudentResult
+{
+ string name = 1;
+ string maths = 2;
+ string physics = 3;
+ string chemistry = 4;
+ string english = 5;
+ float percentage = 6;
+}

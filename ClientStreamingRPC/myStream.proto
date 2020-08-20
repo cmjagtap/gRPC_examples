@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package userPackage;
+
+service Greeter
+ {
+  //client streaming RPC
+ rpc StudentRecord(stream StudentInfo) returns (StudentSummary)
+  {
+  
+  }
+}
+
+message StudentInfo
+{
+ string name = 1;
+ string stdclass = 2;
+ string address = 3;
+}
+message StudentSummary
+{
+ string message = 1;
+}
